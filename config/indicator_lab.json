@@ -1,0 +1,13 @@
+{
+  "candidate_count": 28,
+  "primary_exit_mode": "native",
+  "other_exit_mode": "common_risk",
+  "primary_max_holding_days": 20,
+  "sensitivity_max_holding_days": 40,
+  "train_end": "2025-10-17",
+  "review_start": "2025-10-18",
+  "selection_min_train_trades": 8,
+  "selection_top_n": 3,
+  "selection_metric": "total_return",
+  "notes": "本轮全部28条规则在首次计算新策略结果前写入代码，不进行阈值网格搜索。最后一年曾在前轮使用，仅称复查段，不称独立未触碰样本外。胜率仅统计扣费后已平仓盈利笔数。主试验原生指标退出叠加共同ATR风控；对照移除原生退出，仅用共同风控。"
+}

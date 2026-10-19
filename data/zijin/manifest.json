@@ -1,0 +1,204 @@
+{
+  "manifest_created_at_utc": "2026-10-18T04:00:13.787409+00:00",
+  "datasets": [
+    {
+      "name": "zijin_qfq",
+      "provider": "Tencent Finance",
+      "symbol": "sh601899",
+      "adjustment": "qfq",
+      "urls": [
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2023-01-01,2023-12-31,640,qfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2024-01-01,2024-12-31,640,qfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2025-01-01,2025-12-31,640,qfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2026-01-01,2026-12-31,640,qfq"
+      ],
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    },
+    {
+      "name": "zijin_raw",
+      "provider": "Tencent Finance",
+      "symbol": "sh601899",
+      "adjustment": "none",
+      "urls": [
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2023-01-01,2023-12-31,640,",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2024-01-01,2024-12-31,640,",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2025-01-01,2025-12-31,640,",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899,day,2026-01-01,2026-12-31,640,"
+      ],
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    },
+    {
+      "name": "sse",
+      "provider": "Tencent Finance",
+      "symbol": "sh000001",
+      "adjustment": "none",
+      "urls": [
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2023-01-01,2023-12-31,640,",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2024-01-01,2024-12-31,640,",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2025-01-01,2025-12-31,640,",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2026-01-01,2026-12-31,640,"
+      ],
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    },
+    {
+      "name": "gold_au9999",
+      "provider": "Shanghai Gold Exchange",
+      "symbol": "Au99.99",
+      "unit": "CNY/gram",
+      "urls": [
+        "https://www.sge.com.cn/graph/Dailyhq"
+      ],
+      "post_data": {
+        "instid": "Au99.99"
+      },
+      "rows": 916,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    },
+    {
+      "name": "precious_metals_sw801053",
+      "provider": "SWS Research",
+      "symbol": "801053",
+      "urls": [
+        "https://www.swsresearch.com/institute-sw/api/index_publish/trend/?swindexcode=801053&period=DAY"
+      ],
+      "rows": 913,
+      "first": "2023-01-03",
+      "last": "2026-10-16",
+      "initial_snapshot_note": "初次取数该站点证书链验证失败，公开数据快照经关闭验证取得；常规重新下载启用验证。"
+    },
+    {
+      "name": "zijin_dividends",
+      "provider": "Sina Finance",
+      "urls": [
+        "https://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/601899.phtml"
+      ],
+      "rows": 8
+    }
+  ],
+  "request_start": "2023-01-01",
+  "request_end": "2026-10-18",
+  "files": [
+    {
+      "path": "data/zijin/processed/gold_au9999.csv",
+      "sha256": "ea939ac0f12554bb4e0e205ce1d42d7613b9e710c5692c4281e2a12bfe3b6c64",
+      "modified_at_utc": "2026-10-18T04:00:13.921393+00:00"
+    },
+    {
+      "path": "data/zijin/processed/precious_metals_sw801053.csv",
+      "sha256": "9563cd7f4837d456bcb75b88f354b7873028985c14160b962b310305dae60804",
+      "modified_at_utc": "2026-10-18T04:00:13.969394+00:00"
+    },
+    {
+      "path": "data/zijin/processed/sse.csv",
+      "sha256": "03ec42dd6fe8568487448617daa0792a7f7de6d1c1dc1431dca5ed37b8bf15bd",
+      "modified_at_utc": "2026-10-18T04:00:13.897392+00:00"
+    },
+    {
+      "path": "data/zijin/processed/zijin_dividends.csv",
+      "sha256": "5738978d06ce3eec4c68b3b5f2779acb449f2f4026f23336ad265349c3c6f2cb",
+      "modified_at_utc": "2026-10-18T04:00:14.049397+00:00"
+    },
+    {
+      "path": "data/zijin/processed/zijin_qfq.csv",
+      "sha256": "ca4c255d17eeb74c25c030fcf98570866128ea8244cddd1c7383ca9d320c7bb9",
+      "modified_at_utc": "2026-10-18T04:00:13.825390+00:00"
+    },
+    {
+      "path": "data/zijin/processed/zijin_raw.csv",
+      "sha256": "a9c6c3ddb8df10beeac0e5841e9e2d201b477c1ae6ffbc0b458f7e6c81b6a0c1",
+      "modified_at_utc": "2026-10-18T04:00:13.861391+00:00"
+    },
+    {
+      "path": "data/zijin/raw/gold_au9999.json",
+      "sha256": "1e8329d992ed310395ab42d77a8ffcbb8f4a72eaf2c016178999104db2c9296a",
+      "modified_at_utc": "2026-10-18T03:48:56.665397+00:00"
+    },
+    {
+      "path": "data/zijin/raw/qq_sse2023.json",
+      "sha256": "c8d459f95d4c855fb959907b646d930fcb2febd0620937865cffeef63f8a4236",
+      "modified_at_utc": "2026-10-18T03:50:25.804028+00:00"
+    },
+    {
+      "path": "data/zijin/raw/qq_zijin2023.json",
+      "sha256": "8f353046516de869b0849ab6fe37d3c037ef9167c429b5b88b6227cefaa224e5",
+      "modified_at_utc": "2026-10-18T03:50:25.840029+00:00"
+    },
+    {
+      "path": "data/zijin/raw/sw_sector.json",
+      "sha256": "594b33b7fa5f9619e380b31a1afbef1004042d5ce29d0d7dc8d0dd1991f4bf2d",
+      "modified_at_utc": "2026-10-18T03:50:39.480432+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_sse_2023.json",
+      "sha256": "59860253f7fc53664941d3cdc46653295e2f06f3c7b5b733e503ee9b2d569200",
+      "modified_at_utc": "2026-10-18T03:51:49.106488+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_sse_2024.json",
+      "sha256": "ab6cf84b55bdaef3b6f2448911e7e23ec0843a82046c592aca31c6a80c34f220",
+      "modified_at_utc": "2026-10-18T03:51:49.334494+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_sse_2025.json",
+      "sha256": "398b24b7775b348d0f05670b69f25e1aa9d7fcd0c271fc8cf4ec93d56d344a05",
+      "modified_at_utc": "2026-10-18T03:51:49.590502+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_sse_2026.json",
+      "sha256": "8c44a99bdb754a37331c6c7d1123d541c20f2de9d33485a06c175b6beabdd702",
+      "modified_at_utc": "2026-10-18T03:51:49.834509+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_qfq_2023.json",
+      "sha256": "192d29014e50be1390f69dd4b0f6517eb9afeeae6d23379f0a4901e8ce17eaf7",
+      "modified_at_utc": "2026-10-18T03:51:47.122429+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_qfq_2024.json",
+      "sha256": "292b7ef5b2c25608d5d3351865fbe22e511857a6fb6cf393107dc8e550513f62",
+      "modified_at_utc": "2026-10-18T03:51:47.362436+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_qfq_2025.json",
+      "sha256": "2f9572c831f988d170bc92fd0de2d426f8dc1a65496a45e5a0aa251d1bca855a",
+      "modified_at_utc": "2026-10-18T03:51:47.606443+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_qfq_2026.json",
+      "sha256": "fbc6ad0fa6cec4cb1ae12795840c89c43867f1959963cec0a74139e886567075",
+      "modified_at_utc": "2026-10-18T03:51:47.878451+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_raw_2023.json",
+      "sha256": "72718aea57beced5d0aa863d50ea7d5b97888cce1c9309f8cbf1a0f8494f9782",
+      "modified_at_utc": "2026-10-18T03:51:48.146459+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_raw_2024.json",
+      "sha256": "1d74b837561b459e24d1aeee80d432ded70be16a957d39ac179efb96c7e1904b",
+      "modified_at_utc": "2026-10-18T03:51:48.394467+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_raw_2025.json",
+      "sha256": "cf1825e1feb35e93dc583766b4bfe0394d7e08440a1014130bd94ec23cebc2d6",
+      "modified_at_utc": "2026-10-18T03:51:48.610473+00:00"
+    },
+    {
+      "path": "data/zijin/raw/tencent_zijin_raw_2026.json",
+      "sha256": "8ca4b2a495298cdba8f765d443b7e36be3efb82e45da9642e0a0c79e31953ca0",
+      "modified_at_utc": "2026-10-18T03:51:48.842480+00:00"
+    },
+    {
+      "path": "data/zijin/raw/zijin_dividends.html",
+      "sha256": "5b2c73fb7a69feb668a66a1a0884ea58264f51e2b5318a0de76c56b3f6ffe744",
+      "modified_at_utc": "2026-10-18T03:51:51.050545+00:00"
+    }
+  ]
+}

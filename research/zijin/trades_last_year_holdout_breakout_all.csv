@@ -1,0 +1,2 @@
+signal_date,entry_date,exit_date,entry_price,exit_price,shares,holding_sessions,entry_total,entry_cost,exit_cost,gross_dividends,dividend_tax,net_pnl,net_return,exit_signal_date,exit_reason
+2025-12-22,2025-12-23,2026-01-22,33.06,37.5,400,20,13235.74424,11.744240000000001,20.15,0.0,0.0,1744.1057600000004,0.13177239816474426,2026-01-21,holding_20_sessions

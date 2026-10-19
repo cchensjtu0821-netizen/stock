@@ -1,0 +1,214 @@
+{
+  "created_before_replay_utc": "2026-10-18T04:37:31.240251+00:00",
+  "lab_config": {
+    "candidate_count": 28,
+    "primary_exit_mode": "native",
+    "other_exit_mode": "common_risk",
+    "primary_max_holding_days": 20,
+    "sensitivity_max_holding_days": 40,
+    "train_end": "2025-10-17",
+    "review_start": "2025-10-18",
+    "selection_min_train_trades": 8,
+    "selection_top_n": 3,
+    "selection_metric": "total_return",
+    "notes": "本轮全部28条规则在首次计算新策略结果前写入代码，不进行阈值网格搜索。最后一年曾在前轮使用，仅称复查段，不称独立未触碰样本外。胜率仅统计扣费后已平仓盈利笔数。主试验原生指标退出叠加共同ATR风控；对照移除原生退出，仅用共同风控。"
+  },
+  "candidates": [
+    {
+      "id": "macd_cross",
+      "name": "MACD 金叉",
+      "category": "单指标",
+      "entry": "DIF 上穿 DEA，参数 12/26/9",
+      "exit": "DIF 下穿 DEA"
+    },
+    {
+      "id": "macd_zero",
+      "name": "MACD 零轴突破",
+      "category": "单指标",
+      "entry": "DIF 上穿零轴",
+      "exit": "DIF 下穿零轴"
+    },
+    {
+      "id": "macd_hist_turn",
+      "name": "MACD 绿柱缩短拐点",
+      "category": "单指标",
+      "entry": "柱值在零轴下方，由下降转为上升",
+      "exit": "柱值在零轴上方，由上升转为下降"
+    },
+    {
+      "id": "ema_cross",
+      "name": "EMA10/30 金叉",
+      "category": "单指标",
+      "entry": "EMA10 上穿 EMA30",
+      "exit": "EMA10 下穿 EMA30"
+    },
+    {
+      "id": "rsi_rebound",
+      "name": "RSI30 超卖回升",
+      "category": "单指标",
+      "entry": "RSI14 上穿 30",
+      "exit": "RSI14 ≥ 60 或下穿 25"
+    },
+    {
+      "id": "rsi_momentum",
+      "name": "RSI50 动量",
+      "category": "单指标",
+      "entry": "RSI14 上穿 50",
+      "exit": "RSI14 下穿 50"
+    },
+    {
+      "id": "kdj_rebound",
+      "name": "KDJ 低位金叉",
+      "category": "单指标",
+      "entry": "K 上穿 D 且前日 K < 30，参数 9/3/3",
+      "exit": "K 下穿 D"
+    },
+    {
+      "id": "bollinger_reentry",
+      "name": "布林下轨回归",
+      "category": "单指标",
+      "entry": "收盘从下方重返布林下轨之上，参数 20/2",
+      "exit": "收盘达到布林中轨"
+    },
+    {
+      "id": "bollinger_breakout",
+      "name": "布林上轨突破",
+      "category": "单指标",
+      "entry": "收盘上穿布林上轨，参数 20/2",
+      "exit": "收盘跌破布林中轨"
+    },
+    {
+      "id": "donchian_breakout",
+      "name": "唐奇安20日突破",
+      "category": "单指标",
+      "entry": "收盘上穿此前 20 日最高价",
+      "exit": "收盘跌破此前 10 日最低价"
+    },
+    {
+      "id": "cci_rebound",
+      "name": "CCI 超卖回升",
+      "category": "单指标",
+      "entry": "CCI20 上穿 −100",
+      "exit": "CCI20 ≥ 100 或下穿 −100"
+    },
+    {
+      "id": "mfi_rebound",
+      "name": "MFI 资金流回升",
+      "category": "单指标",
+      "entry": "MFI14 上穿 20",
+      "exit": "MFI14 ≥ 70"
+    },
+    {
+      "id": "obv_breakout",
+      "name": "OBV 量能突破",
+      "category": "单指标",
+      "entry": "OBV 上穿此前 20 日最高 OBV 且收盘 > MA20",
+      "exit": "OBV < 其 EMA20 或收盘 < MA20"
+    },
+    {
+      "id": "adx_di_cross",
+      "name": "ADX 趋势金叉",
+      "category": "单指标",
+      "entry": "+DI 上穿 −DI 且 ADX14 > 20",
+      "exit": "+DI 下穿 −DI"
+    },
+    {
+      "id": "supertrend_flip",
+      "name": "Supertrend 翻多",
+      "category": "单指标",
+      "entry": "Supertrend(10,3) 从空翻多",
+      "exit": "Supertrend 从多翻空"
+    },
+    {
+      "id": "williams_rebound",
+      "name": "威廉指标超卖回升",
+      "category": "单指标",
+      "entry": "Williams %R14 上穿 −80",
+      "exit": "Williams %R14 ≥ −20"
+    },
+    {
+      "id": "macd_trend",
+      "name": "MACD＋均线趋势",
+      "category": "混合",
+      "entry": "MACD 金叉且 MA20 > MA60、收盘 > MA60",
+      "exit": "MACD 死叉"
+    },
+    {
+      "id": "macd_rsi",
+      "name": "MACD＋RSI",
+      "category": "混合",
+      "entry": "MACD 金叉且 RSI14 位于 45～70",
+      "exit": "MACD 死叉"
+    },
+    {
+      "id": "macd_volume",
+      "name": "MACD＋放量",
+      "category": "混合",
+      "entry": "MACD 金叉且量比 ≥ 1.2（基于此前 20 日均量）",
+      "exit": "MACD 死叉"
+    },
+    {
+      "id": "macd_adx",
+      "name": "MACD＋ADX",
+      "category": "混合",
+      "entry": "MACD 金叉且 ADX14 > 20、+DI > −DI",
+      "exit": "MACD 死叉或 +DI < −DI"
+    },
+    {
+      "id": "macd_gold_sector",
+      "name": "MACD＋黄金板块",
+      "category": "混合",
+      "entry": "MACD 金叉且通过既有黄金与板块过滤",
+      "exit": "MACD 死叉"
+    },
+    {
+      "id": "rsi_macd_trend",
+      "name": "RSI50＋MACD＋均线",
+      "category": "混合",
+      "entry": "RSI14 上穿 50、DIF > DEA、通过均线趋势",
+      "exit": "RSI14 下穿 50 或 MACD 死叉"
+    },
+    {
+      "id": "kdj_trend",
+      "name": "KDJ＋均线趋势",
+      "category": "混合",
+      "entry": "K 上穿 D、前日 K < 50、通过均线趋势",
+      "exit": "K 下穿 D"
+    },
+    {
+      "id": "bollinger_rsi",
+      "name": "布林下轨＋RSI",
+      "category": "混合",
+      "entry": "收盘重返下轨之上且 RSI14 < 45",
+      "exit": "收盘达到中轨"
+    },
+    {
+      "id": "donchian_adx_volume",
+      "name": "突破＋ADX＋放量",
+      "category": "混合",
+      "entry": "20 日突破、ADX14 > 20、+DI > −DI、量比 ≥ 1.2",
+      "exit": "收盘跌破此前 10 日最低价"
+    },
+    {
+      "id": "supertrend_macd",
+      "name": "Supertrend＋MACD",
+      "category": "混合",
+      "entry": "MACD 金叉且 Supertrend 状态为多",
+      "exit": "Supertrend 翻空或 MACD 死叉"
+    },
+    {
+      "id": "regime_adaptive",
+      "name": "ADX 区分趋势与震荡",
+      "category": "混合",
+      "entry": "ADX≥25 时 MACD 金叉且+DI>−DI；ADX<20 时布林回归且RSI<45；中间区不入场",
+      "exit": "当前 ADX≥25 时 MACD 死叉；当前 ADX<25 时收盘达到 MA20"
+    },
+    {
+      "id": "vote3of5",
+      "name": "五项条件三票通过",
+      "category": "混合",
+      "entry": "收盘>MA60、MACD多头、RSI50～70、ADX多头、OBV>EMA20，满足数从<3升至≥3",
+      "exit": "上述条件满足数降至 ≤2"
+    }
+  ]
+}

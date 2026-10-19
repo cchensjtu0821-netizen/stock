@@ -1,0 +1,2 @@
+date,close,analysis_close,cumulative_dividend,raw_reference_ma20,raw_reference_ma60,rsi14,atr14,macd_dif,macd_dea,volume_ratio,gold_filter,sector_filter,market_filter,entry_pullback_technical,entry_pullback_gold,entry_pullback_gold_sector,entry_pullback_all,entry_breakout_all
+2026-10-16,29.92,31.770000000000003,1.85,30.677,32.11983333333333,42.44502361375798,1.0334375339259518,-0.7358778942623232,-0.7009443092735902,1.112614334438511,False,False,False,False,False,False,False,False

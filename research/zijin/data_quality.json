@@ -1,0 +1,18 @@
+{
+  "raw_rows": 915,
+  "test_sessions": 726,
+  "test_first": "2023-10-18",
+  "test_last": "2026-10-16",
+  "missing_external_dates": {
+    "gold": [],
+    "sector": [
+      "2026-10-15"
+    ],
+    "sse": []
+  },
+  "vendor_qfq_vs_forward_cash_adjusted_offset_min": 1.8499999999999943,
+  "vendor_qfq_vs_forward_cash_adjusted_offset_max": 1.850000000000005,
+  "raw_vs_qfq_date_alignment": true,
+  "dividend_records": 8,
+  "data_manifest_sha256": "402ccb47b597c5d7f9fe96108a75dabdbfc8a1d2daf33ed993a7d8443722b661"
+}

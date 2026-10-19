@@ -1,0 +1,20 @@
+{
+  "research_as_of": "2026-10-18",
+  "download_start": "2023-01-01",
+  "test_start": "2023-10-18",
+  "test_end": "2026-10-16",
+  "holdout_start": "2025-10-18",
+  "initial_cash": 100000,
+  "max_position_fraction": 0.30,
+  "risk_per_trade": 0.01,
+  "commission_rate": 0.00025,
+  "minimum_commission": 5.0,
+  "transfer_rate": 0.00001,
+  "sell_stamp_rate": 0.0005,
+  "slippage_rate": 0.0005,
+  "stop_atr": 2.0,
+  "trailing_atr": 3.0,
+  "target_r": 3.0,
+  "max_holding_days": 20,
+  "notes": "规则在读取策略回测结果前固定；不做参数寻优。回撤以日收盘账户净值计算。仅研究紫金A股单一标的，空仓现金收益设为0。"
+}

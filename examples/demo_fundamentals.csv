@@ -1,0 +1,2 @@
+symbol,period_end,published_date,currency,source,revenue_ttm,revenue_prior_ttm,eps_ttm,eps_prior_ttm,net_income_ttm,average_equity,operating_income_ttm,operating_cash_flow_ttm,capex_ttm,shares_outstanding,debt,cash,ebitda_ttm
+DEMO,2025-09-30,2025-11-05,USD,synthetic-demo-not-market-data,1200000000,1000000000,2.4,2.0,240000000,1000000000,300000000,280000000,80000000,100000000,500000000,200000000,350000000

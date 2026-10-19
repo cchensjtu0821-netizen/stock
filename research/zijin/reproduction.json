@@ -1,0 +1,48 @@
+{
+  "config": {
+    "research_as_of": "2026-10-18",
+    "download_start": "2023-01-01",
+    "test_start": "2023-10-18",
+    "test_end": "2026-10-16",
+    "holdout_start": "2025-10-18",
+    "initial_cash": 100000,
+    "max_position_fraction": 0.3,
+    "risk_per_trade": 0.01,
+    "commission_rate": 0.00025,
+    "minimum_commission": 5.0,
+    "transfer_rate": 1e-05,
+    "sell_stamp_rate": 0.0005,
+    "slippage_rate": 0.0005,
+    "stop_atr": 2.0,
+    "trailing_atr": 3.0,
+    "target_r": 3.0,
+    "max_holding_days": 20,
+    "notes": "规则在读取策略回测结果前固定；不做参数寻优。回撤以日收盘账户净值计算。仅研究紫金A股单一标的，空仓现金收益设为0。"
+  },
+  "data_quality": {
+    "raw_rows": 915,
+    "test_sessions": 726,
+    "test_first": "2023-10-18",
+    "test_last": "2026-10-16",
+    "missing_external_dates": {
+      "gold": [],
+      "sector": [
+        "2026-10-15"
+      ],
+      "sse": []
+    },
+    "vendor_qfq_vs_forward_cash_adjusted_offset_min": 1.8499999999999943,
+    "vendor_qfq_vs_forward_cash_adjusted_offset_max": 1.850000000000005,
+    "raw_vs_qfq_date_alignment": true,
+    "dividend_records": 8,
+    "data_manifest_sha256": "402ccb47b597c5d7f9fe96108a75dabdbfc8a1d2daf33ed993a7d8443722b661"
+  },
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "code_sha256": {
+    "scripts/replay_zijin.py": "dde73f4b869ade03462a47d1af5ed3124291381a44e97d802b095ba03c30e9d3",
+    "stock_analysis/swing.py": "7481c15784a5729909c949d3dc4bdb789d882b2f946e052450387cfc65792890",
+    "stock_analysis/relationships.py": "518e1512bdb69d005422a59227f19c61de6a4c2be149e59bbe0807ffe401faa2"
+  }
+}
