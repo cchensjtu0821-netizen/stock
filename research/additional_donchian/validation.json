@@ -1,0 +1,7 @@
+{
+  "main_scenario_period_runs": 56,
+  "dividend_tax_sensitivity_runs": 16,
+  "passive_full_runs": 12,
+  "legacy_a_share_runs_matched": 3,
+  "cash_equity_risk_round_lot_ledger_checks_passed": true
+}

@@ -1,0 +1,101 @@
+{
+  "created_at_utc": "2026-10-19T06:54:19.412936+00:00",
+  "stock": "长城汽车A",
+  "symbol": "sh601633",
+  "currency": "CNY",
+  "price_unit": "CNY/share",
+  "volume_unit": "shares",
+  "raw_first": "2023-01-03",
+  "raw_last": "2026-10-16",
+  "rows": 915,
+  "files": [
+    {
+      "path": "data/gwm_a/processed/gwm_a_dividends.csv",
+      "sha256": "36c63814df1bd60e2a8bfe59995a1be50cf366dec7c8326592ba3b8a56c196f0"
+    },
+    {
+      "path": "data/gwm_a/processed/gwm_a_qfq.csv",
+      "sha256": "cc121acc7f0ec6bfc0b65154ce39edefedad7a99c38150388ad4d38418e749a6"
+    },
+    {
+      "path": "data/gwm_a/processed/gwm_a_raw.csv",
+      "sha256": "188cc878a8f7e8c69e90174c89274e9ffa39169d667478d4e3f0fde713e33d47"
+    },
+    {
+      "path": "data/gwm_a/quality.json",
+      "sha256": "4d40d46384d5d16d9b3265996bd32afb9c7f3182c032148b1cbc84a38e4dbbc9"
+    },
+    {
+      "path": "data/gwm_a/raw/dividends.html",
+      "sha256": "8efe55e3a9cbad162bd63322d653c5e530526e53ddccc4c6475d6c091e61a18f"
+    },
+    {
+      "path": "data/gwm_a/raw/dividends.html.source.json",
+      "sha256": "11dea59a2e46af290462f285ae6b629d7553ff494e98c2e10bef57f6b03f193d"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2023.json",
+      "sha256": "1e684f78cfb247d1cc7b1cac7c8d194e59f8e9cbf90fe647d9a4e9f6f772c810"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2023.json.source.json",
+      "sha256": "0a78f0c58a2a49a703d312e77337f7aecc53d725b311f9eed81a70452c737bfb"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2024.json",
+      "sha256": "146e38280d0cf7e776bef2e16be203283bc712aa034882ab3ef7bb53f80baa7c"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2024.json.source.json",
+      "sha256": "beca8a3bfc867c1d163609113bb522d6fbb107ebd331f081b311d49398c20063"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2025.json",
+      "sha256": "831ec7a229170def6699bec1f1a75334bf05c6b48446f1c31f7bc39aeaf155c7"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2025.json.source.json",
+      "sha256": "76e3e05770987a2ec027a67409c04dc322b34d26b1efb4f40749a30a0950d3c6"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2026.json",
+      "sha256": "ac9cb63e66627ffc6efd369931b0472b35067589eacac3852dbfb2f3887d185f"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_qfq_2026.json.source.json",
+      "sha256": "57d52c7e1c94823b12a74ae30156cbac6f16939f3c4d1e6c87f820c75eef9ca8"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2023.json",
+      "sha256": "22af10851e9e01fb282bf61f57f05cd8bb9bf017df7ab7cee7ebcd98df6ffba2"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2023.json.source.json",
+      "sha256": "49fd15c1de30ac02b016e7f31d488f9120538bce1c851f93ee6cf6029cabe620"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2024.json",
+      "sha256": "1510beb52ad6b2ddd62715e8875ff7b1a7e668280cdce2b1223a3397bb4f9296"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2024.json.source.json",
+      "sha256": "dc7fe210dc0fc5f572fb6a18abcb9580b9cbe0261e6911a91b073a3f8c7ee4d9"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2025.json",
+      "sha256": "1a397a98b9e42f499de54acdd92bbbe61fdc1f4eac958f4a5a68a7debb4cc845"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2025.json.source.json",
+      "sha256": "b9ab4d2a6cf31f05dade46c8c8e9a315e1f2d8b6312ead592a9ed6271cbb5f40"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2026.json",
+      "sha256": "19027efbfccb24c4482c5ac9f175a538cd3daa5cd7c5bc48a2912040b3ff8f33"
+    },
+    {
+      "path": "data/gwm_a/raw/tencent_raw_2026.json.source.json",
+      "sha256": "b71a8820e6ae5421f737c080913fc67e6346e25e6374a58f330579f5bbe8df44"
+    }
+  ]
+}

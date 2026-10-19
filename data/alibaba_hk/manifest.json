@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-10-19T06:54:19.631090+00:00",
+  "stock": "阿里巴巴港股",
+  "symbol": "hk09988",
+  "currency": "HKD",
+  "price_unit": "HKD/share",
+  "volume_unit": "shares",
+  "raw_first": "2023-01-03",
+  "raw_last": "2026-10-16",
+  "rows": 933,
+  "files": [
+    {
+      "path": "data/alibaba_hk/processed/alibaba_hk_dividends.csv",
+      "sha256": "e07d21d0b64e046f7738633c2abd485c1a34f03c6ca41bd1873d65a129213133"
+    },
+    {
+      "path": "data/alibaba_hk/processed/alibaba_hk_qfq.csv",
+      "sha256": "2baa7689ad5ce10da5dd04d620a10e131af3ebc8fcc50918d2c04d274685d52d"
+    },
+    {
+      "path": "data/alibaba_hk/processed/alibaba_hk_raw.csv",
+      "sha256": "f07b7b85e9c88d2a6d082da7196e066331680a8f48d14ba5acf0d28eabcdbc77"
+    },
+    {
+      "path": "data/alibaba_hk/quality.json",
+      "sha256": "911a326dbbb42db5411a44a122d2d612ece46d0c24050c311ee850fe110054ce"
+    },
+    {
+      "path": "data/alibaba_hk/raw/dividends.html",
+      "sha256": "79ca542617f438928b18eeb92c9bcab7e8349c8f24a13a4a08c0d68eab2590d2"
+    },
+    {
+      "path": "data/alibaba_hk/raw/dividends.html.source.json",
+      "sha256": "84336eaa0db005346b92c24fb2384c72511b67b1759d913a06e95e16212a8f93"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2023.json",
+      "sha256": "951007e7f0af8bcfef50d7614d22dcb3770fda9114f69dbce30c68cd04844ad3"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2023.json.source.json",
+      "sha256": "973052d7d22fae5b1a8fca7901b5c275d15499cd10d15edb9264ef769ee07a18"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2024.json",
+      "sha256": "611402cc7ac0969c53a3c4ab3530ec1016f3269bf30588bd6bc4c4e9ffd6ad76"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2024.json.source.json",
+      "sha256": "7172fe642e293ef74b68dfa6d162333959079c8e8b70e9213279dafe3dc90c68"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2025.json",
+      "sha256": "a798288754a0439e35de1bae5da6efa7357fe887cf29c7cf28d1715bbed93ae9"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2025.json.source.json",
+      "sha256": "6fef212ecec0e52d7b5312daaa086b87cb630c47aa606ecda6d2ab5f029dbc1d"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2026.json",
+      "sha256": "62077a794f48614084f95ad2f2216c1cd8da4004610f56b2014685435b532280"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_qfq_2026.json.source.json",
+      "sha256": "69a15cb14499cdb0e1f16aca846f270d4f70c0c46a00e1215f8f8ad1e709c983"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_raw.json",
+      "sha256": "16356febc7f881bddb7d437cf906ac5fb9fc9334e9052456a55a5140dd97b5f5"
+    },
+    {
+      "path": "data/alibaba_hk/raw/tencent_raw.json.source.json",
+      "sha256": "8201fe47c1bb1251e53605a6874c3d3461ca577ce96c565ae4f50572b45c5ff1"
+    }
+  ]
+}

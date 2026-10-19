@@ -1,0 +1,17 @@
+stock,scenario,base_return,tax20_return,tax20_drawdown
+seres_hk,original__original_exit,0.0,0.0,0.0
+seres_hk,original__trend_exit,0.0,0.0,0.0
+seres_hk,risk2_cap50__original_exit,0.0,0.0,0.0
+seres_hk,risk2_cap50__trend_exit,0.0,0.0,0.0
+seres_hk,risk3_cap70__original_exit,0.0,0.0,0.0
+seres_hk,risk3_cap70__trend_exit,0.0,0.0,0.0
+seres_hk,risk5_cap100__original_exit,0.0,0.0,0.0
+seres_hk,risk5_cap100__trend_exit,0.0,0.0,0.0
+alibaba_hk,original__original_exit,0.08005792500000064,0.08005792500000064,-0.029609330172810422
+alibaba_hk,original__trend_exit,0.022063374999999885,0.022063374999999885,-0.08916321934009308
+alibaba_hk,risk2_cap50__original_exit,0.14989467499999964,0.14989467499999964,-0.06073200195706163
+alibaba_hk,risk2_cap50__trend_exit,0.01542202499999945,0.01542202499999945,-0.17839438386583506
+alibaba_hk,risk3_cap70__original_exit,0.173704125,0.173704125,-0.09666596125289939
+alibaba_hk,risk3_cap70__trend_exit,0.03106452500000012,0.03106452500000012,-0.23669542608854444
+alibaba_hk,risk5_cap100__original_exit,0.3269392500000001,0.3269392500000001,-0.17589836086062205
+alibaba_hk,risk5_cap100__trend_exit,0.03939834999999969,0.03939834999999969,-0.34361706230223865

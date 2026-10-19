@@ -1,0 +1,19 @@
+{
+  "dividend_method": "provider raw-minus-qfq difference changes; cash-adjustment proxy, not verified broker payout",
+  "dividend_currency": "HKD",
+  "ex_dates_from_provider": [
+    "2023-12-20",
+    "2024-06-12",
+    "2025-06-11",
+    "2026-06-10"
+  ],
+  "independent_schedule_expected_dates": [
+    "2023-12-20",
+    "2024-06-12",
+    "2025-06-11",
+    "2026-06-10"
+  ],
+  "schedule_dates_match": true,
+  "cash_amount_source_precision": "HKD 0.001 per share",
+  "actual_USD_HKD_payout_conversion": "unknown"
+}

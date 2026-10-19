@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import math
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal, ROUND_HALF_UP, ROUND_CEILING
 
 import numpy as np
 import pandas as pd
@@ -78,14 +78,31 @@ def entry_signals(frame, strategy):
     return signal.fillna(False)
 
 
-def fees(notional, side, config):
+def fees(notional, side, config, day=None):
+    if config.get("market", "CN") == "HK":
+        if day is None:
+            raise ValueError("港股历史费用需要成交日期")
+        date = pd.Timestamp(day)
+        amount = Decimal(str(notional)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        def cents(value):
+            return float(Decimal(str(value)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
+        stamp_rate = Decimal("0.0013") if date < pd.Timestamp("2023-11-17") else Decimal("0.001")
+        settlement = min(100.0, max(2.0, notional * .00002)) if date < pd.Timestamp("2025-06-30") else notional * .000042
+        return {"commission": cents(max(config["minimum_commission"], notional * config["commission_rate"])),
+                "platform": config.get("platform_fee", 0.0),
+                "stamp": float((amount * stamp_rate).quantize(Decimal("1"), rounding=ROUND_CEILING)),
+                "sfc_levy": cents(notional * .000027), "afrc_levy": cents(notional * .0000015),
+                "trading": cents(notional * .0000565), "settlement": cents(settlement),
+                "slippage": notional * config["slippage_rate"]}
     return {"commission": max(config["minimum_commission"], notional * config["commission_rate"]),
             "transfer": notional * config["transfer_rate"],
             "stamp": notional * config["sell_stamp_rate"] if side == "sell" else 0.0,
             "slippage": notional * config["slippage_rate"]}
 
 
-def dividend_tax_rate(entry_date, exit_date):
+def dividend_tax_rate(entry_date, exit_date, config=None):
+    if config is not None and config.get("market", "CN") == "HK":
+        return config.get("dividend_tax_rate", 0.0)
     # 持股期按自然月/年；阈值按含一个月、含一年处理。
     if exit_date <= entry_date + pd.DateOffset(months=1):
         return .2
@@ -98,9 +115,11 @@ def price_limit(reference, multiple):
     return float((Decimal(str(reference)) * Decimal(str(multiple))).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
 
-def can_fill(row, previous, side):
+def can_fill(row, previous, side, market="CN"):
     if row["volume"] <= 0:
         return False
+    if market == "HK":
+        return row["open"] > 0  # 港股不套用A股前收盘±10%的成交近似。
     reference = previous["close"] - row["cash_dividend"]
     if side == "buy":
         return row["open"] < price_limit(reference, 1.1) - 1e-8
@@ -158,6 +177,9 @@ def backtest(frame, config, strategy, start=None, end=None, passive_fraction=Non
         signal = entry_signals(frame, strategy)
     exits = indicator_exit.reindex(frame.index).fillna(False).astype(bool) if indicator_exit is not None else None
     cash = float(config["initial_cash"])
+    lot_size = int(config.get("lot_size", 100))
+    if lot_size <= 0:
+        raise ValueError("每手股数必须大于0")
     position = None
     pending_exit = None
     cumulative_cost = 0.0
@@ -173,10 +195,10 @@ def backtest(frame, config, strategy, start=None, end=None, passive_fraction=Non
         if position is not None:
             position["gross_dividends"] += position["shares"] * row["cash_dividend"]
             if pending_exit is not None and session > position["entry_session"]:
-                if can_fill(row, previous, "sell"):
+                if can_fill(row, previous, "sell", config.get("market", "CN")):
                     notional = position["shares"] * row["open"]
-                    selling_cost = sum(fees(notional, "sell", config).values())
-                    dividend_tax = position["gross_dividends"] * dividend_tax_rate(position["entry_date"], day)
+                    selling_cost = sum(fees(notional, "sell", config, day).values())
+                    dividend_tax = position["gross_dividends"] * dividend_tax_rate(position["entry_date"], day, config)
                     proceeds = notional - selling_cost + position["gross_dividends"] - dividend_tax
                     cash += proceeds
                     cumulative_cost += selling_cost + dividend_tax
@@ -193,7 +215,7 @@ def backtest(frame, config, strategy, start=None, end=None, passive_fraction=Non
                     blocked_sells += 1
         wants_buy = (session > 0 and bool(signal.loc[previous_day])) if passive_fraction is None else not position_was_bought
         if position is None and not exited and wants_buy and previous is not None:
-            if can_fill(row, previous, "buy"):
+            if can_fill(row, previous, "buy", config.get("market", "CN")):
                 max_fraction = config["max_position_fraction"] if passive_fraction is None else passive_fraction
                 budget = cash * max_fraction
                 atr = float(previous["atr14"])
@@ -204,13 +226,13 @@ def backtest(frame, config, strategy, start=None, end=None, passive_fraction=Non
                         shares = 0
                     else:
                         shares = min(shares, cash * config["risk_per_trade"] / risk_distance)
-                shares = int(shares // 100) * 100
+                shares = int(shares // lot_size) * lot_size
                 while shares > 0:
                     notional = shares * row["open"]
-                    buying_cost = sum(fees(notional, "buy", config).values())
+                    buying_cost = sum(fees(notional, "buy", config, day).values())
                     if notional + buying_cost <= min(cash, budget):
                         break
-                    shares -= 100
+                    shares -= lot_size
                 if shares > 0:
                     cash -= notional + buying_cost
                     cumulative_cost += buying_cost
@@ -244,7 +266,7 @@ def backtest(frame, config, strategy, start=None, end=None, passive_fraction=Non
                     position["exit_signal_date"] = day
         shares = position["shares"] if position else 0
         receivable = position["gross_dividends"] if position else 0.0
-        reserved_tax = receivable * dividend_tax_rate(position["entry_date"], day) if position else 0.0
+        reserved_tax = receivable * dividend_tax_rate(position["entry_date"], day, config) if position else 0.0
         equity = cash + shares * row["close"] + receivable - reserved_tax
         equity_rows.append({"date": day, "equity": equity, "cash": cash, "shares": shares,
                             "dividend_receivable": receivable, "dividend_tax_reserved": reserved_tax,

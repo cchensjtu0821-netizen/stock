@@ -1,0 +1,13 @@
+{
+  "dividend_method": "provider raw-minus-qfq difference changes; cash-adjustment proxy, not verified broker payout",
+  "dividend_currency": "HKD",
+  "ex_dates_from_provider": [
+    "2026-05-06"
+  ],
+  "independent_schedule_expected_dates": [
+    "2026-05-06"
+  ],
+  "schedule_dates_match": true,
+  "cash_amount_source_precision": "HKD 0.001 per share",
+  "actual_USD_HKD_payout_conversion": "unknown"
+}

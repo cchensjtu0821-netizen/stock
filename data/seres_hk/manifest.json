@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-10-19T06:54:19.484148+00:00",
+  "stock": "赛力斯H股",
+  "symbol": "hk09927",
+  "currency": "HKD",
+  "price_unit": "HKD/share",
+  "volume_unit": "shares",
+  "raw_first": "2025-11-05",
+  "raw_last": "2026-10-16",
+  "rows": 234,
+  "files": [
+    {
+      "path": "data/seres_hk/processed/seres_hk_dividends.csv",
+      "sha256": "e1a996096862d59197ce166ff94acf89b6d0c58fd3e78a811ad63a7ed9b57990"
+    },
+    {
+      "path": "data/seres_hk/processed/seres_hk_qfq.csv",
+      "sha256": "e311d0a363e1176f9e616124504d796f7c170e556749e3756737efa9d939c7a7"
+    },
+    {
+      "path": "data/seres_hk/processed/seres_hk_raw.csv",
+      "sha256": "e09804288a0bd26858be8f19669f8db8baa67462f893be838241f46c361a5f2b"
+    },
+    {
+      "path": "data/seres_hk/quality.json",
+      "sha256": "f7090d7024135ab20e6006098dbfb778d0ce09639ce3369d16bbd2b02eae9867"
+    },
+    {
+      "path": "data/seres_hk/raw/dividends.html",
+      "sha256": "f3bf2bacc6a62a7c0483eda1b7b6f6cde2d8908f093998e8c15329344bfba1fa"
+    },
+    {
+      "path": "data/seres_hk/raw/dividends.html.source.json",
+      "sha256": "425257089b757abb6ee4fec6eb445dc1d6bfb01bedf314f3f40564f242ddfa39"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2023.json",
+      "sha256": "7ece9f78ccc90b31fc88f423e75f25beacb03f4d91323bf7336dff82c79cb20f"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2023.json.source.json",
+      "sha256": "63d1e17ad94c197e01b0dcfa1f84a5aa877112532422ff74dfc2f6c7937d1431"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2024.json",
+      "sha256": "7ece9f78ccc90b31fc88f423e75f25beacb03f4d91323bf7336dff82c79cb20f"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2024.json.source.json",
+      "sha256": "9dd74fc1079ceb4c4d62fecebe97d3db9a9c43bfef6503ce601af557294d9547"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2025.json",
+      "sha256": "735d7c83f2e3aa33d511f00e541f55a2b7994daf7b8b759b8fc1e210a55c4907"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2025.json.source.json",
+      "sha256": "1ff15cdbb41cbeca7e9f81e3bc5cd128d3d65a7d4b2fc3a1473e22d47345baaa"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2026.json",
+      "sha256": "05c8d1a8a557607979e673c2e0c87993259923193af6073f9478f3a011f97b5f"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_qfq_2026.json.source.json",
+      "sha256": "6fafa58e81d5ec4f8d57b688d61198badd1c59f763e3b92ae707317afdbe4ce1"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_raw.json",
+      "sha256": "a8a5f4b8da05568f640c14854cf2affb83dc56735a2fe6cefe35fe0cd39be4a0"
+    },
+    {
+      "path": "data/seres_hk/raw/tencent_raw.json.source.json",
+      "sha256": "bdda1ace0b8e741fc07b36adc56f3be44fe0cf1705150f772cbf03f0316c8b2d"
+    }
+  ]
+}

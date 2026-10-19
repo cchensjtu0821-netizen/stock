@@ -67,6 +67,21 @@ python3 -m venv .venv
 
 复现：`.venv/bin/python scripts/replay_aggressive_donchian.py`。每股每情景独立10万元，使用同一已研究历史快照；风险比例为开仓名义预算，不是实际损失或最大回撤上限。报告含相同资金上限的买入持有基准，不按事后最高收益自动选择实盘配置。
 
+### 长城汽车、赛力斯H股、阿里巴巴港股
+
+复用上述唐奇安四档仓位和两种退出。长城为A股601633（初始10万元人民币），赛力斯09927、阿里09988为港股（各初始10万港元），不计人民币/港元汇兑收益。
+
+- [完整可视化报告](research/additional_donchian/report.html) / [文字版](research/additional_donchian/report.md) / [净值比较图](research/additional_donchian/comparison.png)
+- [全部统计](research/additional_donchian/summary.csv) / [逐笔交易](research/additional_donchian/trades.csv) / [每次投入](research/additional_donchian/entries.csv)
+- 数据来源：[长城A](data/gwm_a/README.md)、[赛力斯H](data/seres_hk/README.md)、[阿里港股](data/alibaba_hk/README.md)
+
+赛力斯H股2025-11-05上市，预热后只回放2025-12-03至2026-10-16，不补造三年历史。港股按其交易费、每手股数及成交约束处理；主比较扣交易成本、股息税前，港元现金股息采用行情提供方除息调整代理，另提供20%股息税敏感性。
+
+```bash
+.venv/bin/python scripts/fetch_extended_stocks.py
+.venv/bin/python scripts/replay_additional_donchian.py
+```
+
 ## 从这些指标开始
 
 | 维度 | 优先关注 | 帮助回答的问题 |

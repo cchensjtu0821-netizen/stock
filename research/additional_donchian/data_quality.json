@@ -1,0 +1,89 @@
+{
+  "gwm_a": {
+    "name": "长城汽车A",
+    "symbol": "601633",
+    "market": "CN",
+    "currency": "CNY",
+    "raw_start": "2023-01-03",
+    "raw_end": "2026-10-16",
+    "raw_rows": 915,
+    "effective_start": "2023-10-18",
+    "end": "2026-10-16",
+    "test_sessions": 726,
+    "entry_signals_in_test": 16,
+    "calendar": "provider's local-market sessions, no forward filling; HK independent exchange calendar not audited",
+    "raw_qfq_dates_aligned": true,
+    "forward_cash_vs_qfq_offset_min": 1.3999999999999986,
+    "forward_cash_vs_qfq_offset_max": 1.4000000000000057,
+    "dividend_quality": {
+      "dividend_method": "Sina implemented cash dividends",
+      "dividend_currency": "CNY"
+    }
+  },
+  "seres_hk": {
+    "name": "赛力斯H股",
+    "symbol": "09927",
+    "market": "HK",
+    "currency": "HKD",
+    "raw_start": "2025-11-05",
+    "raw_end": "2026-10-16",
+    "raw_rows": 234,
+    "effective_start": "2025-12-03",
+    "end": "2026-10-16",
+    "test_sessions": 214,
+    "entry_signals_in_test": 0,
+    "calendar": "provider's local-market sessions, no forward filling; HK independent exchange calendar not audited",
+    "raw_qfq_dates_aligned": true,
+    "forward_cash_vs_qfq_offset_min": 0.9129999999999967,
+    "forward_cash_vs_qfq_offset_max": 0.9130000000000109,
+    "dividend_quality": {
+      "dividend_method": "provider raw-minus-qfq difference changes; cash-adjustment proxy, not verified broker payout",
+      "dividend_currency": "HKD",
+      "ex_dates_from_provider": [
+        "2026-05-06"
+      ],
+      "independent_schedule_expected_dates": [
+        "2026-05-06"
+      ],
+      "schedule_dates_match": true,
+      "cash_amount_source_precision": "HKD 0.001 per share",
+      "actual_USD_HKD_payout_conversion": "unknown"
+    }
+  },
+  "alibaba_hk": {
+    "name": "阿里巴巴港股",
+    "symbol": "09988",
+    "market": "HK",
+    "currency": "HKD",
+    "raw_start": "2023-01-03",
+    "raw_end": "2026-10-16",
+    "raw_rows": 933,
+    "effective_start": "2023-10-18",
+    "end": "2026-10-16",
+    "test_sessions": 737,
+    "entry_signals_in_test": 31,
+    "calendar": "provider's local-market sessions, no forward filling; HK independent exchange calendar not audited",
+    "raw_qfq_dates_aligned": true,
+    "forward_cash_vs_qfq_offset_min": 5.574999999999989,
+    "forward_cash_vs_qfq_offset_max": 5.575000000000017,
+    "dividend_quality": {
+      "dividend_method": "provider raw-minus-qfq difference changes; cash-adjustment proxy, not verified broker payout",
+      "dividend_currency": "HKD",
+      "ex_dates_from_provider": [
+        "2023-12-20",
+        "2024-06-12",
+        "2025-06-11",
+        "2026-06-10"
+      ],
+      "independent_schedule_expected_dates": [
+        "2023-12-20",
+        "2024-06-12",
+        "2025-06-11",
+        "2026-06-10"
+      ],
+      "schedule_dates_match": true,
+      "cash_amount_source_precision": "HKD 0.001 per share",
+      "actual_USD_HKD_payout_conversion": "unknown"
+    }
+  }
+}

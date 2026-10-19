@@ -1,0 +1,30 @@
+{
+  "research_as_of": "2026-10-19",
+  "requested_start": "2023-10-18",
+  "test_end": "2026-10-16",
+  "initial_cash": 100000,
+  "strategy": "donchian_breakout",
+  "inherited_scenarios": "config/aggressive_donchian.json",
+  "new_listing_warmup_sessions": 20,
+  "stocks": [
+    {"id": "gwm_a", "name": "长城汽车A", "symbol": "601633", "market": "CN", "currency": "CNY", "lot_size": 100},
+    {"id": "seres_hk", "name": "赛力斯H股", "symbol": "09927", "market": "HK", "currency": "HKD", "lot_size": 100, "listing_date": "2025-11-05"},
+    {"id": "alibaba_hk", "name": "阿里巴巴港股", "symbol": "09988", "market": "HK", "currency": "HKD", "lot_size": 100}
+  ],
+  "hk_execution_assumptions": {
+    "commission_rate": 0.0003,
+    "minimum_commission": 3.0,
+    "platform_fee": 15.0,
+    "slippage_rate": 0.0005,
+    "dividend_tax_rate": 0.0,
+    "dividend_tax_sensitivity": 0.2,
+    "stamp_before_2023_11_17": 0.0013,
+    "stamp_from_2023_11_17": 0.001,
+    "sfc_levy": 0.000027,
+    "afrc_levy": 0.0000015,
+    "trading_fee": 0.0000565,
+    "settlement_before_2025_06_30": "0.002%, minimum HKD2, maximum HKD100 per side",
+    "settlement_from_2025_06_30": 0.000042
+  },
+  "notes": "固定复用此前1%/30%、2%/50%、3%/70%、5%/100%风险/资金上限以及原短线和趋势两种退出，不择优调参。港股按10万港元现金账户视角；长城A股按10万元人民币，不包含跨币种汇兑收益。港股无A股10%涨跌停限制；日线信号仍次日开盘执行。佣金/平台费为研究假设，不是用户实际券商费率；股息主比较为税前，个人税收和实际派息到账汇率未知，另列20%股息税敏感性。赛力斯只用上市后真实行情，先预热20个交易日，与同日开始被动基准比较，不拼接A股或虚造三年历史。"
+}
