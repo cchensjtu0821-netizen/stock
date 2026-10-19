@@ -108,6 +108,38 @@ class ExitComparisonTests(unittest.TestCase):
         self.assertEqual(classic["stats"]["closed_trades"], 0)
         self.assertGreater(classic["stats"]["open_position"]["shares"], controlled["trades"].iloc[0]["shares"])
 
+    def test_trend_mode_keeps_winner_past_profit_target_and_time_cap(self):
+        self.config["max_holding_days"] = 2
+        self.frame.loc[self.frame.index[2]:, ["close", "analysis_close"]] = 13.5
+        self.frame.loc[self.frame.index[3]:, ["open", "analysis_open"]] = 13.5
+        old = backtest(self.frame, self.config, "custom", signals=self.signals, use_ma20_exit=False)
+        trend_config = dict(self.config, max_holding_days=None)
+        trend = backtest(self.frame, trend_config, "custom", signals=self.signals,
+                         use_ma20_exit=False, use_profit_target=False)
+        self.assertEqual(old["trades"].iloc[0]["exit_reason"], "closing_3R_target")
+        self.assertEqual(trend["stats"]["closed_trades"], 0)
+        self.assertIsNotNone(trend["stats"]["open_position"])
+
+    def test_trend_mode_still_executes_trailing_protection_next_open(self):
+        self.config["max_holding_days"] = None
+        self.frame.loc[self.frame.index[2], ["close", "analysis_close"]] = 13.5
+        self.frame.loc[self.frame.index[3], ["close", "analysis_close"]] = 11.5
+        self.frame.loc[self.frame.index[4], ["open", "analysis_open"]] = 11.0
+        result = backtest(self.frame, self.config, "custom", signals=self.signals,
+                          use_ma20_exit=False, use_profit_target=False)
+        trade = result["trades"].iloc[0]
+        self.assertEqual(trade["exit_reason"], "closing_atr_stop")
+        self.assertEqual(trade["exit_signal_date"], str(self.frame.index[3].date()))
+        self.assertEqual(trade["exit_date"], str(self.frame.index[4].date()))
+
+    def test_trend_mode_still_honors_indicator_exit(self):
+        self.config["max_holding_days"] = None
+        result = backtest(self.frame, self.config, "custom", signals=self.signals,
+                          indicator_exit=self.exits, use_ma20_exit=False, use_profit_target=False)
+        trade = result["trades"].iloc[0]
+        self.assertEqual(trade["exit_reason"], "indicator_exit")
+        self.assertEqual(trade["exit_date"], str(self.frame.index[4].date()))
+
 
 if __name__ == "__main__":
     unittest.main()

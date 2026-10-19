@@ -57,6 +57,16 @@ python3 -m venv .venv
 
 下载脚本保留原始响应及每次抓取时间，默认复用缓存；股票以未复权价格成交，技术指标只加回当日已除息股息。三年账户收益以初始10万元为分母，未平仓按末日收盘估值；低资金暴露和100股整数交易限制需结合持仓权重解释。分段结果属于历史复查，不能作为独立样本外或实盘验证。
 
+### 唐奇安进取仓位与趋势持有情景
+
+固定比较原1%风险/30%资金上限，以及2%/50%、3%/70%、5%/100%三档研究假设，均不加杠杆；各档对比原3R止盈/20日上限与取消固定止盈及期限的趋势退出，保留2ATR初始保护、3ATR移动保护、10日低点退出和原入场信号。
+
+- [可视化报告](research/aggressive_donchian/report.html) / [文字报告](research/aggressive_donchian/report.md)
+- [全部时期数值](research/aggressive_donchian/summary.csv) / [每次开仓金额](research/aggressive_donchian/entries.csv) / [逐笔交易](research/aggressive_donchian/trades.csv)
+- [预先固定情景参数](config/aggressive_donchian.json) / [执行与对账](research/aggressive_donchian/validation.json)
+
+复现：`.venv/bin/python scripts/replay_aggressive_donchian.py`。每股每情景独立10万元，使用同一已研究历史快照；风险比例为开仓名义预算，不是实际损失或最大回撤上限。报告含相同资金上限的买入持有基准，不按事后最高收益自动选择实盘配置。
+
 ## 从这些指标开始
 
 | 维度 | 优先关注 | 帮助回答的问题 |

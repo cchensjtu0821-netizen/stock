@@ -1,0 +1,24 @@
+{
+  "research_as_of": "2026-10-19",
+  "test_start": "2023-10-18",
+  "test_end": "2026-10-16",
+  "initial_cash": 100000,
+  "stocks": ["zijin", "cmb", "gigadevice"],
+  "strategy": "donchian_breakout",
+  "profiles": [
+    {"id": "original", "name": "原方案", "risk_per_trade": 0.01, "max_position_fraction": 0.30},
+    {"id": "risk2_cap50", "name": "风险2%/投入上限50%", "risk_per_trade": 0.02, "max_position_fraction": 0.50},
+    {"id": "risk3_cap70", "name": "风险3%/投入上限70%", "risk_per_trade": 0.03, "max_position_fraction": 0.70},
+    {"id": "risk5_cap100", "name": "风险5%/投入上限100%", "risk_per_trade": 0.05, "max_position_fraction": 1.00}
+  ],
+  "exit_modes": [
+    {"id": "original_exit", "name": "原3R止盈/20日上限", "use_profit_target": true, "max_holding_days": 20},
+    {"id": "trend_exit", "name": "趋势退出/无固定止盈和期限", "use_profit_target": false, "max_holding_days": null}
+  ],
+  "periods": {
+    "full": ["2023-10-18", "2026-10-16"],
+    "first_two_years": ["2023-10-18", "2025-10-17"],
+    "last_year_review": ["2025-10-18", "2026-10-16"]
+  },
+  "notes": "预先固定的仓位/退出情景研究，不按结果调整阈值或宣称独立样本外。不加杠杆、不融资；每股每情景独立10万元；保持唐奇安20日上穿入场、10日低点指标退出、初始2ATR和移动3ATR以及原有成本和交易约束。趋势模式仅移除固定3R盈利目标和20日期限，不改变入场事件或加仓。2%/3%/5%为回测风险预算情景，不代表用户可承受损失或实际损失上限。"
+}

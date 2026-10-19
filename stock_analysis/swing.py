@@ -143,7 +143,8 @@ def performance(equity, trades, initial_cash):
 
 
 def backtest(frame, config, strategy, start=None, end=None, passive_fraction=None,
-             signals=None, indicator_exit=None, use_ma20_exit=True, use_atr_risk_controls=True):
+             signals=None, indicator_exit=None, use_ma20_exit=True, use_atr_risk_controls=True,
+             use_profit_target=True):
     """首日空仓，首个信号在区间内首日收盘后产生；不利用区间前信号开仓。"""
     start, end = pd.Timestamp(start or config["test_start"]), pd.Timestamp(end or config["test_end"])
     sample = frame.loc[start:end]
@@ -230,13 +231,13 @@ def backtest(frame, config, strategy, start=None, end=None, passive_fraction=Non
                 reason = None
                 if use_atr_risk_controls and row["analysis_close"] <= position["stop"]:
                     reason = "closing_atr_stop"
-                elif use_atr_risk_controls and row["analysis_close"] >= position["target"]:
+                elif use_atr_risk_controls and use_profit_target and row["analysis_close"] >= position["target"]:
                     reason = "closing_3R_target"
                 elif exits is not None and bool(exits.loc[day]):
                     reason = "indicator_exit"
                 elif use_ma20_exit and row["analysis_close"] < row["ma20"]:
                     reason = "close_below_ma20"
-                elif session - position["entry_session"] + 1 >= config["max_holding_days"]:
+                elif config["max_holding_days"] is not None and session - position["entry_session"] + 1 >= config["max_holding_days"]:
                     reason = f"holding_{config['max_holding_days']}_sessions"
                 if reason:
                     pending_exit = reason

@@ -1,0 +1,358 @@
+{
+  "scope": "2023-10-18 to 2026-10-16; full/native/donchian_breakout; each stock independently starts with CNY 100000",
+  "unit": "CNY",
+  "method": "arithmetic mean per entry, not weighted by holding duration; includes current open entry; entry total inferred from entry-day cash decrement and checked against trade ledger",
+  "stocks": {
+    "zijin": {
+      "name": "紫金矿业",
+      "closed_entries": 14,
+      "open_entries": 0,
+      "all_entries": 14,
+      "mean_entry_total_including_cost": "16700.28131357142714285714286",
+      "mean_entry_notional": "16686.71428571428571428571429",
+      "minimum_entry_total": "12335.28524000000",
+      "maximum_entry_total": "22578.14636",
+      "closed_only_mean_entry_total": "16700.28131357142864285714286",
+      "entries": [
+        {
+          "entry_date": "2023-12-05",
+          "shares": 1700,
+          "entry_price": "12.12",
+          "entry_total_including_cost": "20619.65904",
+          "entry_notional": "20604.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-02-19",
+          "shares": 1600,
+          "entry_price": "12.51",
+          "entry_total_including_cost": "20031.21216",
+          "entry_notional": "20016.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-03-15",
+          "shares": 1100,
+          "entry_price": "15.32",
+          "entry_total_including_cost": "16865.59452",
+          "entry_notional": "16852.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-05-21",
+          "shares": 700,
+          "entry_price": "19.41",
+          "entry_total_including_cost": "13598.92937",
+          "entry_notional": "13587.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-07-02",
+          "shares": 800,
+          "entry_price": "18.08",
+          "entry_total_including_cost": "14476.37664",
+          "entry_notional": "14464.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-09-25",
+          "shares": 900,
+          "entry_price": "16.92",
+          "entry_total_including_cost": "15240.76628",
+          "entry_notional": "15228.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-01-14",
+          "shares": 1100,
+          "entry_price": "16.29",
+          "entry_total_including_cost": "17933.13869",
+          "entry_notional": "17919.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-03-17",
+          "shares": 1100,
+          "entry_price": "17.49",
+          "entry_total_including_cost": "19253.81188999999",
+          "entry_notional": "19239.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-06-13",
+          "shares": 1000,
+          "entry_price": "19.26",
+          "entry_total_including_cost": "19274.82260000000",
+          "entry_notional": "19260.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-08-11",
+          "shares": 1100,
+          "entry_price": "20.51",
+          "entry_total_including_cost": "22578.14636",
+          "entry_notional": "22561.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-09-26",
+          "shares": 500,
+          "entry_price": "27.1",
+          "entry_total_including_cost": "13561.9105",
+          "entry_notional": "13550.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-12-09",
+          "shares": 500,
+          "entry_price": "31.18",
+          "entry_total_including_cost": "15602.95090",
+          "entry_notional": "15590.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-01-28",
+          "shares": 300,
+          "entry_price": "41.4",
+          "entry_total_including_cost": "12431.33419999999",
+          "entry_notional": "12420.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-07-22",
+          "shares": 400,
+          "entry_price": "30.81",
+          "entry_total_including_cost": "12335.28524000000",
+          "entry_notional": "12324.00",
+          "closed": true
+        }
+      ]
+    },
+    "cmb": {
+      "name": "招商银行",
+      "closed_entries": 17,
+      "open_entries": 1,
+      "all_entries": 18,
+      "mean_entry_total_including_cost": "26437.91088666666555555555556",
+      "mean_entry_notional": "26417.83333333333333333333333",
+      "minimum_entry_total": "20511.57695999999",
+      "maximum_entry_total": "31071.59647999999",
+      "closed_only_mean_entry_total": "26235.15887294117611764705882",
+      "entries": [
+        {
+          "entry_date": "2024-01-08",
+          "shares": 900,
+          "entry_price": "28.17",
+          "entry_total_including_cost": "25372.26828",
+          "entry_notional": "25353.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-02-20",
+          "shares": 700,
+          "entry_price": "31.62",
+          "entry_total_including_cost": "22150.82184000001",
+          "entry_notional": "22134.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-04-18",
+          "shares": 800,
+          "entry_price": "33.26",
+          "entry_total_including_cost": "26628.22207999999",
+          "entry_notional": "26608.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-07-03",
+          "shares": 800,
+          "entry_price": "35.01",
+          "entry_total_including_cost": "28029.28608",
+          "entry_notional": "28008.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-08-26",
+          "shares": 800,
+          "entry_price": "33.7",
+          "entry_total_including_cost": "26980.48960",
+          "entry_notional": "26960.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-09-26",
+          "shares": 600,
+          "entry_price": "34.16",
+          "entry_total_including_cost": "20511.57695999999",
+          "entry_notional": "20496.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-12-25",
+          "shares": 600,
+          "entry_price": "39.23",
+          "entry_total_including_cost": "23555.88888000000",
+          "entry_notional": "23538.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-02-13",
+          "shares": 600,
+          "entry_price": "41.65",
+          "entry_total_including_cost": "25008.99240000000",
+          "entry_notional": "24990.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-03-17",
+          "shares": 600,
+          "entry_price": "45.32",
+          "entry_total_including_cost": "27212.66592000000",
+          "entry_notional": "27192.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-05-12",
+          "shares": 600,
+          "entry_price": "43.45",
+          "entry_total_including_cost": "26089.81320000000",
+          "entry_notional": "26070.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-06-17",
+          "shares": 600,
+          "entry_price": "45.88",
+          "entry_total_including_cost": "27548.92127999999",
+          "entry_notional": "27528.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-10-24",
+          "shares": 700,
+          "entry_price": "42.35",
+          "entry_total_including_cost": "29667.53019999999",
+          "entry_notional": "29645.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-11-05",
+          "shares": 600,
+          "entry_price": "43.1",
+          "entry_total_including_cost": "25879.65360000001",
+          "entry_notional": "25860.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-03-18",
+          "shares": 700,
+          "entry_price": "40.13",
+          "entry_total_including_cost": "28112.34916000000",
+          "entry_notional": "28091.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-06-03",
+          "shares": 800,
+          "entry_price": "38.81",
+          "entry_total_including_cost": "31071.59647999999",
+          "entry_notional": "31048.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-07-21",
+          "shares": 600,
+          "entry_price": "39.18",
+          "entry_total_including_cost": "23525.86608000000",
+          "entry_notional": "23508.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-09-02",
+          "shares": 700,
+          "entry_price": "40.9",
+          "entry_total_including_cost": "28651.75880000000",
+          "entry_notional": "28630.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2026-10-13",
+          "shares": 700,
+          "entry_price": "42.66",
+          "entry_total_including_cost": "29884.69512000001",
+          "entry_notional": "29862.00",
+          "closed": false
+        }
+      ]
+    },
+    "gigadevice": {
+      "name": "兆易创新",
+      "closed_entries": 7,
+      "open_entries": 0,
+      "all_entries": 7,
+      "mean_entry_total_including_cost": "10362.56538000000142857142857",
+      "mean_entry_notional": "10352.28571428571428571428571",
+      "minimum_entry_total": "7626.88518",
+      "maximum_entry_total": "15292.79280",
+      "closed_only_mean_entry_total": "10362.56538000000028571428571",
+      "entries": [
+        {
+          "entry_date": "2023-10-31",
+          "shares": 100,
+          "entry_price": "109.0",
+          "entry_total_including_cost": "10910.559",
+          "entry_notional": "10900.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-03-04",
+          "shares": 100,
+          "entry_price": "76.18",
+          "entry_total_including_cost": "7626.88518",
+          "entry_notional": "7618.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-05-07",
+          "shares": 100,
+          "entry_price": "81.98",
+          "entry_total_including_cost": "8207.18098000001",
+          "entry_notional": "8198.00",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-06-14",
+          "shares": 100,
+          "entry_price": "88.5",
+          "entry_total_including_cost": "8859.51350",
+          "entry_notional": "8850.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-09-27",
+          "shares": 200,
+          "entry_price": "76.4",
+          "entry_total_including_cost": "15292.79280",
+          "entry_notional": "15280.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2024-12-17",
+          "shares": 100,
+          "entry_price": "95.2",
+          "entry_total_including_cost": "9529.85520",
+          "entry_notional": "9520.0",
+          "closed": true
+        },
+        {
+          "entry_date": "2025-07-31",
+          "shares": 100,
+          "entry_price": "121.0",
+          "entry_total_including_cost": "12111.17100000000",
+          "entry_notional": "12100.0",
+          "closed": true
+        }
+      ]
+    }
+  }
+}

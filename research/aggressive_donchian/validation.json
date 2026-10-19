@@ -1,0 +1,7 @@
+{
+  "scenario_period_runs_checked": 72,
+  "legacy_stock_period_runs_matched": 9,
+  "matched_cap_passive_paths_saved": 12,
+  "cash_equity_ledger_and_initial_risk_checked": true,
+  "no_leverage_round_lots_and_next_day_execution_checked": true
+}
