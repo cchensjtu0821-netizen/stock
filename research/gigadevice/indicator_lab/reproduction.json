@@ -1,0 +1,46 @@
+{
+  "generated_at_utc": "2026-10-19T03:43:05.127262+00:00",
+  "base_config": {
+    "research_as_of": "2026-10-19",
+    "download_start": "2023-01-01",
+    "test_start": "2023-10-18",
+    "test_end": "2026-10-16",
+    "holdout_start": "2025-10-18",
+    "initial_cash": 100000,
+    "max_position_fraction": 0.3,
+    "risk_per_trade": 0.01,
+    "commission_rate": 0.00025,
+    "minimum_commission": 5.0,
+    "transfer_rate": 1e-05,
+    "sell_stamp_rate": 0.0005,
+    "slippage_rate": 0.0005,
+    "stop_atr": 2.0,
+    "trailing_atr": 3.0,
+    "target_r": 3.0,
+    "max_holding_days": 20,
+    "notes": "复用紫金固定规则至兆易创新A股；空仓现金收益设为0。"
+  },
+  "stock": "gigadevice",
+  "external_manifest_sha256": "402ccb47b597c5d7f9fe96108a75dabdbfc8a1d2daf33ed993a7d8443722b661",
+  "lab_config": {
+    "candidate_count": 28,
+    "primary_exit_mode": "native",
+    "other_exit_mode": "common_risk",
+    "primary_max_holding_days": 20,
+    "sensitivity_max_holding_days": 40,
+    "train_end": "2025-10-17",
+    "review_start": "2025-10-18",
+    "selection_min_train_trades": 8,
+    "selection_top_n": 3,
+    "selection_metric": "total_return",
+    "notes": "本轮全部28条规则在首次计算新策略结果前写入代码，不进行阈值网格搜索。最后一年曾在前轮使用，仅称复查段，不称独立未触碰样本外。胜率仅统计扣费后已平仓盈利笔数。主试验原生指标退出叠加共同ATR风控；对照移除原生退出，仅用共同风控。"
+  },
+  "manifest_sha256": "0c6291832852ec933d8909be826687f01b03b8c09a3e31353bbc064ecc91bd3d",
+  "used_cached_results": true,
+  "calculation_script_sha256": "f158993bfb99ff65608cc90517c486b6ab852b7d2489f0fe7740889816d7dee2",
+  "code_sha256": {
+    "scripts/explore_zijin_indicators.py": "47e3bf5aa193d1d012a6d03284221f83869505af7b6a4b53b6499766c566dbd5",
+    "stock_analysis/indicator_lab.py": "9fbc59a28e63dad9775a4777e1d8271cf9f7cfb7410cec8389f5b18e2bce6c30",
+    "stock_analysis/swing.py": "7481c15784a5729909c949d3dc4bdb789d882b2f946e052450387cfc65792890"
+  }
+}

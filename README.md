@@ -39,6 +39,23 @@ python3 -m venv .venv
 .venv/bin/python scripts/explore_zijin_indicators.py
 ```
 
+### 招商银行、兆易创新跨标的回放
+
+沿用同一套28条候选和交易参数，研究窗口仍为 **2023-10-18 至 2026-10-16**，每只股票的每个策略独立使用10万元。未根据两只股票结果调整规则；黄金板块过滤仍为原黄金和贵金属条件，未替换为银行或半导体指数。
+
+- [三股并排对比](research/stock_comparison/report.html) / [文字版](research/stock_comparison/report.md) / [全部数值](research/stock_comparison/strategy_comparison.csv)
+- [招商银行报告](research/cmb/indicator_lab/report.html) / [文字版](research/cmb/indicator_lab/report.md) / [逐笔交易](research/cmb/indicator_lab/trades.csv) / [数据来源](data/cmb/README.md)
+- [兆易创新报告](research/gigadevice/indicator_lab/report.html) / [文字版](research/gigadevice/indicator_lab/report.md) / [逐笔交易](research/gigadevice/indicator_lab/trades.csv) / [数据来源](data/gigadevice/README.md)
+
+```bash
+.venv/bin/python scripts/fetch_comparison_stocks.py
+.venv/bin/python scripts/explore_zijin_indicators.py --stock cmb
+.venv/bin/python scripts/explore_zijin_indicators.py --stock gigadevice
+.venv/bin/python scripts/compare_indicator_stocks.py
+```
+
+下载脚本保留原始响应及每次抓取时间，默认复用缓存；股票以未复权价格成交，技术指标只加回当日已除息股息。三年账户收益以初始10万元为分母，未平仓按末日收盘估值；低资金暴露和100股整数交易限制需结合持仓权重解释。分段结果属于历史复查，不能作为独立样本外或实盘验证。
+
 ## 从这些指标开始
 
 | 维度 | 优先关注 | 帮助回答的问题 |

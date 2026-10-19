@@ -1,0 +1,23 @@
+{
+  "fixed_catalog_matches_zijin": true,
+  "financial_parameters_match_zijin": true,
+  "checks": {
+    "cmb": {
+      "account_paths_checked": 168,
+      "closed_trade_rows_checked": 1645,
+      "reconciled": true,
+      "nonnegative_cash_and_round_lots": true,
+      "signal_before_execution": true,
+      "benchmark_paths_rebuilt_and_checked": 2
+    },
+    "gigadevice": {
+      "account_paths_checked": 168,
+      "closed_trade_rows_checked": 946,
+      "reconciled": true,
+      "nonnegative_cash_and_round_lots": true,
+      "signal_before_execution": true,
+      "benchmark_paths_rebuilt_and_checked": 2
+    }
+  },
+  "method": "reconcile each stored main/control path and closed trade; no independent audit of source prices"
+}

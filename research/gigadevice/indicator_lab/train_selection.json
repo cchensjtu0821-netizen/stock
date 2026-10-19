@@ -1,0 +1,28 @@
+{
+  "selection_uses": "train only",
+  "eligible": [
+    "macd_cross",
+    "vote3of5",
+    "rsi_momentum",
+    "obv_breakout",
+    "bollinger_breakout",
+    "macd_volume",
+    "kdj_rebound",
+    "macd_rsi",
+    "macd_zero",
+    "williams_rebound",
+    "supertrend_flip",
+    "macd_hist_turn",
+    "macd_trend",
+    "kdj_trend",
+    "cci_rebound"
+  ],
+  "selected": [
+    "macd_cross",
+    "vote3of5",
+    "rsi_momentum"
+  ],
+  "minimum_train_closed_trades": 8,
+  "metric": "total_return",
+  "review_is_untouched_holdout": false
+}

@@ -1,0 +1,17 @@
+{
+  "symbol": "603986",
+  "test_sessions": 726,
+  "raw_rows": 915,
+  "raw_vs_qfq_date_alignment": true,
+  "missing_stock_sessions": [],
+  "forward_cash_vs_qfq_offset_min": 1.7099999999999795,
+  "forward_cash_vs_qfq_offset_max": 1.7100000000000364,
+  "dividend_records": 3,
+  "missing_factor_dates": {
+    "gold": [],
+    "sector": [
+      "2026-10-15"
+    ],
+    "sse": []
+  }
+}

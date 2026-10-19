@@ -1,0 +1,9 @@
+{
+  "review_sessions": 241,
+  "initial_account_risk_budget": 1000.0,
+  "minimum_one_lot_nominal_risk": 77.79470455075015,
+  "maximum_one_lot_nominal_risk": 165.8964726248294,
+  "sessions_one_lot_risk_exceeds_initial_budget": 0,
+  "all_candidates_review_closed_trades": 159,
+  "all_candidates_review_open_positions": 12
+}

@@ -1,0 +1,116 @@
+{
+  "created_at_utc": "2026-10-19T03:34:10.033768+00:00",
+  "stock": "招商银行",
+  "symbol": "sh600036",
+  "currency": "CNY",
+  "price_unit": "CNY/share",
+  "volume_unit": "shares",
+  "request_start": "2023-01-01",
+  "request_end": "2026-10-16",
+  "datasets": [
+    {
+      "name": "raw",
+      "provider": "Tencent Finance",
+      "adjustment": "raw",
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    },
+    {
+      "name": "qfq",
+      "provider": "Tencent Finance",
+      "adjustment": "qfq",
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    }
+  ],
+  "dividends_provider": "Sina Finance",
+  "dividends_rows": 5,
+  "files": [
+    {
+      "path": "data/cmb/processed/cmb_dividends.csv",
+      "sha256": "0b36147ce34166ebb26042493dc0e353aaf1bbe66d17861b4a2fd7c84793aecb"
+    },
+    {
+      "path": "data/cmb/processed/cmb_qfq.csv",
+      "sha256": "698d634f7fef0b70caa2e79b4b0f3e198f14ed00af80d910e528820b47742f98"
+    },
+    {
+      "path": "data/cmb/processed/cmb_raw.csv",
+      "sha256": "df5295626431464cda1b01cf67153f105f2bc09da5cd95859cafafcd177b60ed"
+    },
+    {
+      "path": "data/cmb/raw/dividends.html",
+      "sha256": "6811a1c5d770d9febdcb26277157dc7130a23f708b99c2c5d3d101236a58fa8a"
+    },
+    {
+      "path": "data/cmb/raw/dividends.html.source.json",
+      "sha256": "351e04606044f07e877a49b75fcbc60f86241d2e006959222ddc22117e900f84"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2023.json",
+      "sha256": "5446d180f11f802df96cc4ade137377fd00c8db27e1aa54dcb712d3932d41ee5"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2023.json.source.json",
+      "sha256": "89c6afd352ba73709b969859b5c8d522ad3ce1f6b19ccc9d1e86b2f3966ef743"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2024.json",
+      "sha256": "e45b98472d8e08b54208059363c2859cd685b54fe630d87ceb5e175768ae7e61"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2024.json.source.json",
+      "sha256": "ae2ca090c4b790a2eb689a043a44e745529711a1277e21588bb879fbba07b0ee"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2025.json",
+      "sha256": "14e5205771edfb6e657d131133e6ee204bece0e77e17ada0d923132b227d680b"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2025.json.source.json",
+      "sha256": "884f64e95bb308ad165e9118bbfb8576660e6110c47a18e5a3bc52bd1f3e1a5e"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2026.json",
+      "sha256": "1a0a5f6367a815a53ebcdbdb8cd112cb16b227096ad9f3e0609140d22789643b"
+    },
+    {
+      "path": "data/cmb/raw/tencent_qfq_2026.json.source.json",
+      "sha256": "6c5e6db76ad0dad62b8afdc001b951facb51a0d875e55962b180440c0e07c5e6"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2023.json",
+      "sha256": "41b44965a2e88a6fdb92d8a3257b9bb348f272ac0e5fdccfee6738ce2e327fcd"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2023.json.source.json",
+      "sha256": "3e9359a22fb3e2b53f37024f0241ec1c667022d1083d30c84e7c470a0ecf6f68"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2024.json",
+      "sha256": "a7d002e61ab7945f07b282824dd2def354ecbf8e88bdecd48729d94fd159e768"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2024.json.source.json",
+      "sha256": "fdff7d07053ca1a9dec3d5578647dac656bc8738970596d69afbe0d09f17d78a"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2025.json",
+      "sha256": "7b6a1e26d49555475dec363746c15727b68a7998513e1f349aaeadc624ac9bb9"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2025.json.source.json",
+      "sha256": "9f61502d1582b6979d6c36c5eb3a3639e8f71d298eae35793921e9e39d6c3231"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2026.json",
+      "sha256": "61b547359d97e5d8c898c5795ddd6decdbba640712054762e45f528deaef25cc"
+    },
+    {
+      "path": "data/cmb/raw/tencent_raw_2026.json.source.json",
+      "sha256": "dd79c04f460315613e618f7f8a44d4e58cdb3d8e26f95d9055cef7dd3e7a7cd5"
+    }
+  ]
+}

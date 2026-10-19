@@ -1,0 +1,17 @@
+{
+  "code_sha256": "65703e453030530b38b38cc058dbc49ec778483e08a38286773b510e6807dced",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "inputs": {
+    "research/zijin/indicator_lab/results.json": "750b54f2403376581dc4ed545434795176d6247922461acd5db69760bce70aba",
+    "research/zijin/indicator_lab/leaderboard.csv": "96e5246794fec3e99cb8dcfa1e78ed741cee6c97751fa1445cab87c12f5e4a86",
+    "research/zijin/indicator_lab/strategy_catalog.json": "cca663a15c75d4b59af8215acdbd5c7649d5c447d6c13325bc1c34baf36c5afb",
+    "research/cmb/indicator_lab/results.json": "e07a4d1fd966a0b7b426c1cd42b8c486e6c1b2b2719ee5ed6673f37d5822928e",
+    "research/cmb/indicator_lab/leaderboard.csv": "39d8dc6b4d49d28548aea2bdea85ce42106a72c5979a46bff493e93fe33e1c08",
+    "research/cmb/indicator_lab/strategy_catalog.json": "ae154d00567b17606ac9721e31e4b7be66d7fba7d0079af6e4c70d8c45b22a8d",
+    "research/gigadevice/indicator_lab/results.json": "51eac9c55567cfa6293c3eb5ea0135c517377fad73e1d9a9a9dd54d46a7861e2",
+    "research/gigadevice/indicator_lab/leaderboard.csv": "9eee8bb3e46b673b2004b288897ef01b1897e1594096821dd3c1ec1cc12ac0c6",
+    "research/gigadevice/indicator_lab/strategy_catalog.json": "a3233974ed0b21425bd68dea2d17d43ba6fb912719d04f3d09f4a751e165c97d"
+  }
+}

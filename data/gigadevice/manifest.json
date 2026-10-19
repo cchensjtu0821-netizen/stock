@@ -1,0 +1,116 @@
+{
+  "created_at_utc": "2026-10-19T03:34:10.184866+00:00",
+  "stock": "兆易创新",
+  "symbol": "sh603986",
+  "currency": "CNY",
+  "price_unit": "CNY/share",
+  "volume_unit": "shares",
+  "request_start": "2023-01-01",
+  "request_end": "2026-10-16",
+  "datasets": [
+    {
+      "name": "raw",
+      "provider": "Tencent Finance",
+      "adjustment": "raw",
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    },
+    {
+      "name": "qfq",
+      "provider": "Tencent Finance",
+      "adjustment": "qfq",
+      "rows": 915,
+      "first": "2023-01-03",
+      "last": "2026-10-16"
+    }
+  ],
+  "dividends_provider": "Sina Finance",
+  "dividends_rows": 3,
+  "files": [
+    {
+      "path": "data/gigadevice/processed/gigadevice_dividends.csv",
+      "sha256": "f1ae09d3fed1d1169779d607f353b329617d90bbb64eb0c2b4918e7a93fc40bc"
+    },
+    {
+      "path": "data/gigadevice/processed/gigadevice_qfq.csv",
+      "sha256": "1338826fb8937a6053b0d09ae81111061c12ca40e0cb17437e9f8e5bc8fea2e0"
+    },
+    {
+      "path": "data/gigadevice/processed/gigadevice_raw.csv",
+      "sha256": "b7eb861d4358628e465ead5f67c417613cb63e22a665bc845d291b91008c3742"
+    },
+    {
+      "path": "data/gigadevice/raw/dividends.html",
+      "sha256": "716dea74076b11cb7945b73c501f842bd4fd02c147432eafaacac37d4dadd4d8"
+    },
+    {
+      "path": "data/gigadevice/raw/dividends.html.source.json",
+      "sha256": "08687126cdf5526105d0352510e8c2079ceeb670e01e5cd95bddc34cd6db8a6a"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2023.json",
+      "sha256": "d49611825b025f0c5e87a6a22c8787a16dce9c4c4fbd285eb553de7f3af3c78d"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2023.json.source.json",
+      "sha256": "9b181caa5974b34328957b031d5ab6fb440b045966f5e6ba049e971341d2ba52"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2024.json",
+      "sha256": "4591fa08ef073de4fa95dfd8ed3efcefea44575afb1371428999a0634ae06b21"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2024.json.source.json",
+      "sha256": "d62323d3226c6bb47d31c239faf03ef04c9532cceeee3d4dd95a786643ea096e"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2025.json",
+      "sha256": "b704ae9ff72af0d68fc00fdb0ec75524a24a9802a5a69b3cb7a8f26824b862a2"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2025.json.source.json",
+      "sha256": "00e99c1b0f1ca8a487a763c3476c6b62e1917942b77975ba4918456b06d4304c"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2026.json",
+      "sha256": "79b0bcadfb8ec0d4d7d7f84d655fd1373b27989274e6db27b07c5d2d9064ba35"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_qfq_2026.json.source.json",
+      "sha256": "e9e572c07c16be1d68e535a6328cacc81ba1089bdbb3ad516901e51c04527a86"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2023.json",
+      "sha256": "8ccf9b9737f9f612ff442ffa0ef27a1ae468335ebdb25537a52014b0c7888ee0"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2023.json.source.json",
+      "sha256": "ab1680a99ab09818c0fdf175d7d0571076f702a5698835e7ed61237cbaa343e9"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2024.json",
+      "sha256": "404617d1e7c48aca7c4ee5cfcdb137a4ad6aaf3b5a4baa2230638c4f8c6e0564"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2024.json.source.json",
+      "sha256": "5e7b5993750ed7c457afd3f34acb11874346a5449af106139ac0f78c64a0fbc7"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2025.json",
+      "sha256": "bb81eceea6b17d6043f7d1313c3c19c8eace6ce441a64119cd36a6a4959e5683"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2025.json.source.json",
+      "sha256": "4f796b7b63c78f303757e175e7fe60ecc1b072c7443f60089e0ac56803d2f9a1"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2026.json",
+      "sha256": "8a2453bb4504dfe86f03a3784cce00463f1dcb4f4e94db099d723dd80356b6f4"
+    },
+    {
+      "path": "data/gigadevice/raw/tencent_raw_2026.json.source.json",
+      "sha256": "b08a9059c1c195317b426414efc1480d51fefbeb59ceb2dfdd311e7c29b9ba49"
+    }
+  ]
+}
