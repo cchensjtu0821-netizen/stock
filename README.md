@@ -44,6 +44,7 @@ python3 -m venv .venv
 沿用同一套28条候选和交易参数，研究窗口仍为 **2023-10-18 至 2026-10-16**，每只股票的每个策略独立使用10万元。未根据两只股票结果调整规则；黄金板块过滤仍为原黄金和贵金属条件，未替换为银行或半导体指数。
 
 - [三股并排对比](research/stock_comparison/report.html) / [文字版](research/stock_comparison/report.md) / [全部数值](research/stock_comparison/strategy_comparison.csv)
+- [大趋势未捕获诊断图](research/stock_comparison/trend_capture_diagnostics.png) / [诊断原始数值与来源哈希](research/stock_comparison/trend_capture_diagnostics.json)：区分低仓位、提前退出、无法重入与股票高点/回放终点的口径。
 - [招商银行报告](research/cmb/indicator_lab/report.html) / [文字版](research/cmb/indicator_lab/report.md) / [逐笔交易](research/cmb/indicator_lab/trades.csv) / [数据来源](data/cmb/README.md)
 - [兆易创新报告](research/gigadevice/indicator_lab/report.html) / [文字版](research/gigadevice/indicator_lab/report.md) / [逐笔交易](research/gigadevice/indicator_lab/trades.csv) / [数据来源](data/gigadevice/README.md)
 
